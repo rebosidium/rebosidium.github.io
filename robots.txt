@@ -1,4 +1,5 @@
 User-agent: *
-Allow: /
-
-Sitemap: https://dmitryrybalka.com/sitemap.xml
+Disallow: /assets/
+Disallow: /llms.txt
+Disallow: /sitemap.xml
+Disallow: /google660c6e398b012e34.html
