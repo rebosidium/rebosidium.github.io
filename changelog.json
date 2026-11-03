@@ -1,0 +1,854 @@
+[
+  {
+    "version": "1.14.1",
+    "date": "2026-10-29",
+    "title": "Use exact Figma raster artwork in case galleries",
+    "changes": [
+      "Replace assembled screenshot fragments with11transparent Figma compositions exported at3x and responsive WebP derivatives.",
+      "Bake original panel clipping, corner radii and shadows into each raster; remove runtime artwork masks and corner geometry.",
+      "Preserve caption placement below the main image, thumbnail hover, white preview cards, gray surfaces and background preloading."
+    ]
+  },
+  {
+    "version": "1.14.0",
+    "date": "2026-10-29",
+    "title": "Separate Resume and gallery analytics",
+    "changes": [
+      "Separate Resume arrival, file requests by format, engaged reading and case navigation.",
+      "Record successful manual gallery changes and visible gallery exposure while preserving owner/test exclusion."
+    ]
+  },
+  {
+    "version": "1.13.2",
+    "date": "2026-10-29",
+    "title": "Refine gallery thumbnail hover and caption placement",
+    "changes": [
+      "Use shared control border colors and180msfeedback for gallery thumbnails on hover-capable fine pointers.",
+      "Keep selected borders, white thumbnail surfaces, dimensions and cached image switching unchanged; document the real hover state in DS.",
+      "Place the changing screenshot caption directly below the large viewer, before the thumbnail strip."
+    ]
+  },
+  {
+    "version": "1.13.1",
+    "date": "2026-10-29",
+    "title": "Preload case gallery screenshots before selection",
+    "changes": [
+      "Warm and decode every responsive gallery screenshot in the background with two concurrent slide preparations; preload thumbnails too.",
+      "Reuse in-flight and decoded images on selection, preserving no-overlap transitions and retry after failure.",
+      "Use the shared gray case surface across the gallery area and white thumbnail cards, matching the approved reference."
+    ]
+  },
+  {
+    "version": "1.13.0",
+    "date": "2026-10-29",
+    "title": "Add Larixon screenshot galleries",
+    "changes": [
+      "Add the approved product-context, design-system and outcomes galleries to English and Russian Larixon cases.",
+      "Preserve all existing case headings, paragraphs, results and recommendations."
+    ]
+  },
+  {
+    "version": "1.12.2",
+    "date": "2026-10-28",
+    "title": "Finish Resume release and preserve parallel updates",
+    "changes": [
+      "Preserve The Experience Files title and 18/26 Earlier Experience typography from the latest published site.",
+      "Keep the latest verified AI-profile role corrections.",
+      "Prevent footer focus recovery from interrupting the smooth Back to top action."
+    ]
+  },
+  {
+    "version": "1.12.1",
+    "date": "2026-10-28",
+    "title": "Align Resume logos and tighten ending spacing",
+    "changes": [
+      "Align Resume employment titles and dates with body copy and place each company logo at the right edge of the row in both languages.",
+      "Reduce spacing above and below Back to top from 200px to 60px."
+    ]
+  },
+  {
+    "version": "1.12.0",
+    "date": "2026-10-28",
+    "title": "Refine Resume downloads and reading layout",
+    "changes": [
+      "Implement the Figma two-column download panel with native PDF/DOCX actions and a correctly spaced shared Copy prompt control.",
+      "Use sticky 4/8-column Resume sections, wide section rules, narrower job rules, full-size case logos, case links with 24px spacing, and smooth Back to top.",
+      "Apply the requested bilingual Resume wording and split Trading/Leasing on the Resume page only; label the verified project periods explicitly.",
+      "Remove the horizontal section menu, synchronize new controls with content reveals, and reduce shared Resume/case bullet markers.",
+      "Remove Selected Works and Work, life & balance from both Resume pages, with exactly 200px above and below Back to top before the shared footer."
+    ]
+  },
+  {
+    "version": "1.11.16",
+    "date": "2026-10-28",
+    "title": "Rename the English Resume heading",
+    "changes": [
+      "Use The Experience Files for the English Resume heading, page title, social metadata and actual design-system specimen.",
+      "Preserve the Russian title, resume content and existing layout."
+    ]
+  },
+  {
+    "version": "1.11.15",
+    "date": "2026-10-28",
+    "title": "Use 18/26 for Earlier Experience copy",
+    "changes": [
+      "Extend the existing compact Resume typography to regular Experience paragraphs, including Earlier Experience and its LinkedIn link in both languages.",
+      "Preserve employment metadata, headings, Summary typography and all wording."
+    ]
+  },
+  {
+    "version": "1.11.14",
+    "date": "2026-10-28",
+    "title": "Use 18/26 for both Raiffeisen Resume project labels",
+    "changes": [
+      "Apply the existing company-description paragraph style to the Raiffeisen Bank and Raiffeisen Leasing project labels in both Resume languages.",
+      "Preserve all wording, other typography and layout styles."
+    ]
+  },
+  {
+    "version": "1.11.13",
+    "date": "2026-10-28",
+    "title": "Use 18/26 for Resume company descriptions",
+    "changes": [
+      "Mark the five company-description paragraphs in each language with an explicit shared paragraph variant.",
+      "Reuse the existing 18px/26px Resume typography while preserving all wording and other paragraph styles."
+    ]
+  },
+  {
+    "version": "1.11.12",
+    "date": "2026-10-28",
+    "title": "Separate company descriptions from Resume role headings",
+    "changes": [
+      "Keep role and company in the five employment headings, and move each existing company description into a regular paragraph after the date/location line in both languages.",
+      "Preserve all source wording, dates, achievements, 18/26 lists and existing layout styles."
+    ]
+  },
+  {
+    "version": "1.11.11",
+    "date": "2026-10-28",
+    "title": "Give Resume achievements and certifications clearer 18/26 typography",
+    "changes": [
+      "Use a dedicated 26px line-height role with 18px text for achievement and certification lists in both languages.",
+      "Separate list items with 8px spacing; preserve the typography of other paragraphs and the existing panel alignment."
+    ]
+  },
+  {
+    "version": "1.11.10",
+    "date": "2026-10-28",
+    "title": "Shorten the English Resume panel heading",
+    "changes": [
+      "Use Get resume or onboard your AI-Agent in the shared Resume panel.",
+      "Retain the existing Russian heading and all desktop/mobile alignment."
+    ]
+  },
+  {
+    "version": "1.11.9",
+    "date": "2026-10-28",
+    "title": "Restore the previous Resume achievements typography",
+    "changes": [
+      "Restore achievement bullets to the shared18px body size and32.4px line height in both languages.",
+      "Keep certifications at16px/24px and retain zero extra achievement-item spacing."
+    ]
+  },
+  {
+    "version": "1.11.8",
+    "date": "2026-10-28",
+    "title": "Set Resume achievements and certifications to 16/24",
+    "changes": [
+      "Use16px type with24px line height for achievement and certification lists in both Resume languages.",
+      "Keep zero extra achievement-item spacing and existing certification-item spacing; regenerate the actual shared Resume specimens."
+    ]
+  },
+  {
+    "version": "1.11.7",
+    "date": "2026-10-28",
+    "title": "Link earlier Resume experience to LinkedIn",
+    "changes": [
+      "Append Full list on LinkedIn to the earlier-experience paragraph, with a matching Russian link to the existing profile."
+    ]
+  },
+  {
+    "version": "1.11.6",
+    "date": "2026-10-28",
+    "title": "Refine Resume project labels and employment spacing",
+    "changes": [
+      "Render the Raiffeisen Bank and Raiffeisen Leasing project labels as regular body paragraphs in English and Russian Resume pages.",
+      "Remove the 16px gap between each role heading and its location/date line in both languages.",
+      "Use zero extra spacing between achievement bullets in the Experience section of both Resume pages."
+    ]
+  },
+  {
+    "version": "1.11.5",
+    "date": "2026-10-28",
+    "title": "Name the AI agent in the Resume heading",
+    "changes": [
+      "Use the exact English heading Get my resume or onboard your AI-Agent.",
+      "Keep the Russian heading and the existing Lucide download icons."
+    ]
+  },
+  {
+    "version": "1.11.4",
+    "date": "2026-10-28",
+    "title": "Explain Resume downloads and AI onboarding",
+    "changes": [
+      "Use the approved heading Get my resume or onboard your AI, with its Russian localization.",
+      "Retain ten-column alignment, Medium education text and the existing download icons."
+    ]
+  },
+  {
+    "version": "1.11.3",
+    "date": "2026-10-28",
+    "title": "Use Medium for every Resume education item",
+    "changes": [
+      "Match both linked certificates to the existing Medium 500 education text in English and Russian.",
+      "Preserve active certificate destinations and the existing subtle underline."
+    ]
+  },
+  {
+    "version": "1.11.2",
+    "date": "2026-10-28",
+    "title": "Align Resume with the ten-column reference",
+    "changes": [
+      "Use a 784px desktop reading column and align format-panel content to the same ten-column grid.",
+      "Match location and work-mode typography to the muted employment dates.",
+      "Use interpuncts between role, company and description; shorten Larixon to Classifieds with 5M MAU in both languages."
+    ]
+  },
+  {
+    "version": "1.11.1",
+    "date": "2026-10-28",
+    "title": "Keep Resume employment metadata inline",
+    "changes": [
+      "Join work location/format and employment dates with an interpunct in both Resume languages.",
+      "Preserve the muted date styling and allow natural wrapping on narrow screens."
+    ]
+  },
+  {
+    "version": "1.11.0",
+    "date": "2026-10-28",
+    "title": "Add Russian Resume with original source files",
+    "changes": [
+      "Publish /ru/resume/ with verbatim Google Docs and PDF content, active certificate links and existing Russian PDF/DOCX files.",
+      "Localize Resume navigation, register reciprocal language metadata and show the Russian format panel and page in the design system."
+    ]
+  },
+  {
+    "version": "1.10.7",
+    "date": "2026-10-28",
+    "title": "Restore comfortable mobile Resume button spacing",
+    "changes": [
+      "Left-align mobile Brief your AI with the download links.",
+      "Restore 16px side padding (12px on narrower layouts), keep the icon/text gap, and let the links wrap naturally when space is insufficient."
+    ]
+  },
+  {
+    "version": "1.10.6",
+    "date": "2026-10-28",
+    "title": "Keep mobile Resume format buttons compact",
+    "changes": [
+      "Place content-sized PDF and DOCX controls together on one mobile row.",
+      "Keep Brief your AI on its own row and fit narrow screens with the existing typography and spacing tokens."
+    ]
+  },
+  {
+    "version": "1.10.5",
+    "date": "2026-10-28",
+    "title": "Open the Resume page from shared navigation",
+    "changes": [
+      "Point Resume links in the shared header and footer to /resume/.",
+      "Retain resume navigation tracking and native PDF/DOCX downloads inside the format panel."
+    ]
+  },
+  {
+    "version": "1.10.4",
+    "date": "2026-10-28",
+    "title": "Shorten the Resume format labels",
+    "changes": [
+      "Label the format buttons Resume PDF and Resume DOCX alongside the selected Download icon.",
+      "Keep download intent explicit in accessible names and regenerate the actual page and DS specimens."
+    ]
+  },
+  {
+    "version": "1.10.3",
+    "date": "2026-10-28",
+    "title": "Use the selected Lucide Download glyph",
+    "changes": [
+      "Use the selected arrow-into-tray Download icon on both Resume format buttons at the existing shared size.",
+      "Add Download to Icons & logos and retain File Down as an available library glyph with accurate usage."
+    ]
+  },
+  {
+    "version": "1.10.2",
+    "date": "2026-10-28",
+    "title": "Use document-download icons on Resume",
+    "changes": [
+      "Replace the PDF and DOCX button arrows with the official Lucide File Down icon at the existing shared size.",
+      "Register the actual glyph in the design-system icon inventory; retain native downloads and both themes."
+    ]
+  },
+  {
+    "version": "1.10.1",
+    "date": "2026-10-28",
+    "title": "Make the Resume About surface fill the screen",
+    "changes": [
+      "Give the Resume Work, life & balance section a full-viewport minimum height and vertically center its existing card.",
+      "Scope the change to Resume and preserve the Selected Works covering transition, responsive layout and reduced-motion flow."
+    ]
+  },
+  {
+    "version": "1.10.0",
+    "date": "2026-10-28",
+    "title": "Add the English Resume page",
+    "changes": [
+      "Add /resume/ with the shared My Experience heading and PDF, Word and AI briefing panel.",
+      "Copy Summary, all 25 experience bullets, education and skills directly from the existing PDF; retain active certificate links and use Selected Work muted dates.",
+      "Reuse the existing Work, life & balance teaser and related-case grid with all six cases under Selected Works.",
+      "Add actual responsive DS specimens and preserve seven previously published case-copy updates in canonical sources."
+    ]
+  },
+  {
+    "version": "1.9.0",
+    "date": "2026-10-24",
+    "title": "Complete bilingual monitoring and Metrika goals",
+    "changes": [
+      "Add ten semantic Yandex Metrika goals using the existing trusted intent and engagement events; share content language, page group and mobile/desktop context.",
+      "Add matching language and page-group tags to Sentry errors while preserving error-only capture, privacy, owner/test exclusions and deferred loading.",
+      "Preserve page copy, visual design, interaction definitions and all existing analytics providers."
+    ]
+  },
+  {
+    "version": "1.8.13",
+    "date": "2026-10-24",
+    "title": "Clarify the Russian About interface-quality sentence",
+    "changes": [
+      "Replace one awkward Russian About sentence with shorter natural wording about interface function, appearance, usability and business impact.",
+      "Preserve all other copy, case prose, recommendations, English text, styles and behavior."
+    ]
+  },
+  {
+    "version": "1.8.12",
+    "date": "2026-10-24",
+    "title": "Show consistent year-only project date labels in both languages",
+    "changes": [
+      "Use year-only ranges in every English and Russian work-card date label, including «2025 — Present» / «2025 — сейчас».",
+      "Preserve existing year ranges, case prose, quotations, styles and behavior."
+    ]
+  },
+  {
+    "version": "1.8.11",
+    "date": "2026-10-24",
+    "title": "Capitalize Russian date-label months consistently",
+    "changes": [
+      "Capitalize both month names in the three shared Russian date ranges, as requested by the owner.",
+      "Preserve dates, case prose, English copy, styles and behavior."
+    ]
+  },
+  {
+    "version": "1.8.10",
+    "date": "2026-10-24",
+    "title": "Refine Russian heading, contact invitation and compact categories",
+    "changes": [
+      "Use «Ворк лайф бэленс» for the Russian About title and homepage teaser heading.",
+      "Use a natural two-sentence contact invitation and shorter «Маркетплейс» / «Медтех» categories while retaining full date ranges.",
+      "Preserve all case prose, recommendations, English copy, layout and behavior."
+    ]
+  },
+  {
+    "version": "1.8.9",
+    "date": "2026-10-24",
+    "title": "Use Email in Russian contact links",
+    "changes": [
+      "Use «Email» instead of «Почта» in shared Russian header and footer links.",
+      "Preserve mailto destinations, English copy, case content, styles and behavior."
+    ]
+  },
+  {
+    "version": "1.8.8",
+    "date": "2026-10-24",
+    "title": "Use Half Ironman in the Russian About text",
+    "changes": [
+      "Use «финишировал на Half Ironman» in the Russian About paragraph.",
+      "Preserve the rest of the paragraph, all cases and recommendations, English text and design."
+    ]
+  },
+  {
+    "version": "1.8.7",
+    "date": "2026-10-24",
+    "title": "Use first-person wording for the Russian colleague teaser",
+    "changes": [
+      "Describe the recommendation authors as people I have worked with in the Russian homepage About teaser.",
+      "Preserve every recommendation, case, English text and existing interface."
+    ]
+  },
+  {
+    "version": "1.8.6",
+    "date": "2026-10-24",
+    "title": "Give the Russian AI Brief room and explicit copy feedback",
+    "changes": [
+      "Increase spacing between the Russian Brief label and AI logos, reserving room for the existing checkmark and «Скопировано».",
+      "Keep the control stable across copy states and fitting narrow screens; preserve English layout, case content and copy behavior."
+    ]
+  },
+  {
+    "version": "1.8.5",
+    "date": "2026-10-24",
+    "title": "Compare Russian and English portfolio analytics",
+    "changes": [
+      "Label automatic page views and behavior events with content language and equivalent page group across PostHog, Clarity and GA4.",
+      "Measure case selection and title exposure in both case catalogs; preserve existing event names and owner/test exclusions."
+    ]
+  },
+  {
+    "version": "1.8.4",
+    "date": "2026-10-24",
+    "title": "Refine Russian image descriptions and portrait guidance",
+    "changes": [
+      "Use concise natural Russian for two personal-photo descriptions and the portrait accessibility instruction.",
+      "Preserve HOME/About prose, every case, the English version, design and portrait behavior."
+    ]
+  },
+  {
+    "version": "1.8.2",
+    "date": "2026-10-23",
+    "title": "Refine concise Russian homepage and About copy",
+    "changes": [
+      "Remove translationese and clarify homepage summaries, About and two About quote translations.",
+      "Keep each edited entry no longer than before; preserve every existing case, English copy and design."
+    ]
+  },
+  {
+    "version": "1.8.1",
+    "date": "2026-10-23",
+    "title": "Shorten the current role date in Russian",
+    "changes": [
+      "Use a compact Russian current-role date in the Larixon homepage card to avoid overlap with the project preview.",
+      "Preserve layout, styles, animations and the English version."
+    ]
+  },
+  {
+    "version": "1.8.0",
+    "date": "2026-10-23",
+    "title": "Independent Russian portfolio pages",
+    "changes": [
+      "Add Russian home, About, six existing translated cases and bilingual case catalogs with the existing interface and design.",
+      "Compile localized controls, canonical/hreflang/sitemap and registered analytics routes; preserve owner and QA exclusions.",
+      "Preserve old Russian URLs with query/hash-preserving static redirects on GitHub Pages."
+    ]
+  },
+  {
+    "version": "1.7.3",
+    "date": "2026-10-23",
+    "title": "Align two approved portfolio facts",
+    "changes": [
+      "Mark Figma Code Connect as implemented in the AI profile and both Larixon case languages.",
+      "Align the resume conversion result with Material.pro offer-selection and ordering redesign."
+    ]
+  },
+  {
+    "version": "1.7.2",
+    "date": "2026-10-23",
+    "title": "Remove Russian case index introduction",
+    "changes": [
+      "Remove the introductory sentence from the Russian case index, retaining its heading and six case links."
+    ]
+  },
+  {
+    "version": "1.7.1",
+    "date": "2026-10-23",
+    "title": "Neutral Russian case index introduction",
+    "changes": [
+      "Remove proofreading wording from the Russian case index introduction and page description."
+    ]
+  },
+  {
+    "version": "1.7.0",
+    "date": "2026-10-23",
+    "title": "Open cases from project content",
+    "changes": [
+      "Make available project titles, descriptions and preview images native case links on desktop and mobile.",
+      "Use a subtle text-only hover fade, preserve still artwork and keyboard focus, and count all case entry links through the existing analytics event."
+    ]
+  },
+  {
+    "version": "1.6.9",
+    "date": "2026-10-23",
+    "title": "Add approved research and collaboration details",
+    "changes": [
+      "Add around 10 video-recorded work observations and per-widget user testing to the trading terminal case, plus business/funnel problem validation and cross-functional collaboration to Leasing, in English, Russian and llms.txt. Preserve all original case content and testimonials; add no designer headcount."
+    ]
+  },
+  {
+    "version": "1.6.8",
+    "date": "2026-10-23",
+    "title": "Correct the CIB expansion",
+    "changes": [
+      "Correct the CIB expansion to owner-confirmed Corporate & Investment Banking in llms.txt, English/Russian Leasing cases and generated design-system examples. Preserve all other content, including the corrected project years."
+    ]
+  },
+  {
+    "version": "1.6.7",
+    "date": "2026-10-23",
+    "title": "Correct Leasing and trading terminal project years",
+    "changes": [
+      "Apply owner-confirmed project dates: Leasing 2021–2024 and trading terminal 2025, in llms.txt and both case languages. Remove the obsolete overlap explanation. Preserve employment-period metadata and all other case content."
+    ]
+  },
+  {
+    "version": "1.6.6",
+    "date": "2026-10-23",
+    "title": "AI profile aligned with six published cases",
+    "changes": [
+      "Update llms.txt with all six current published case narratives, separate Raiffeisen Bank and Leasing, and align project summaries, results and FAQ with their scope and measurement context.",
+      "Preserve all 15 full recommendations and their source links; identify the existing Leasing employment/project date discrepancy without inventing revised career dates.",
+      "Document the shared five-stage case framework: Project & role, The challenge, Research & process, The solution and Outcomes; apply it to case summaries."
+    ]
+  },
+  {
+    "version": "1.6.5",
+    "date": "2026-10-23",
+    "title": "Reading entrance queue and case artwork weight",
+    "changes": [
+      "Finish reading blocks passed above the viewport and remove their stale entrance queue delays, while preserving animation for upcoming content and active fades.",
+      "Optimize case screenshots and illustrations with WebP Q94 when materially smaller; preserve transparency, dimensions and smaller existing lossless variants. Remove click-to-enlarge links from case artwork."
+    ]
+  },
+  {
+    "version": "1.6.4",
+    "date": "2026-10-23",
+    "title": "Leasing proposal conversion outcome",
+    "changes": [
+      "Add the owner-confirmed 20 percentage-point increase from proposal received to proposal in progress immediately after the 12-to-2-minute preparation result in English and Russian. Preserve all other case content."
+    ]
+  },
+  {
+    "version": "1.6.3",
+    "date": "2026-10-23",
+    "title": "Stable touch scrolling during browser toolbar changes",
+    "changes": [
+      "Retain homepage touch scene and work-card geometry during height-only browser toolbar changes, preventing programmatic reading-position corrections while scrolling.",
+      "Remeasure on width or layout changes and preserve the fluid contact footer, desktop resizing, reading pages and existing motion."
+    ]
+  },
+  {
+    "version": "1.6.2",
+    "date": "2026-10-23",
+    "title": "Larixon feedback before research",
+    "changes": [
+      "Move Larixon team feedback immediately before Research & process in English and its corresponding Russian section. Preserve all copy, quotations and images."
+    ]
+  },
+  {
+    "version": "1.6.1",
+    "date": "2026-10-23",
+    "title": "Recover temporary gallery image failures",
+    "changes": [
+      "Retry only failed About photos with bounded, low-priority recovery. Preserve prefetch and valid images during source upgrades; hide native broken-image placeholders."
+    ]
+  },
+  {
+    "version": "1.6.0",
+    "date": "2026-10-22",
+    "title": "Images across all six case studies",
+    "changes": [
+      "Place eighteen owner-supplied images alongside the relevant product and supporting work in the English and Russian six cases. Preserve all existing copy and testimonials exactly.",
+      "Keep complete image compositions, responsive lossless sources and native full-size links."
+    ]
+  },
+  {
+    "version": "1.5.14",
+    "date": "2026-10-22",
+    "title": "Yandex.Market analytics cover",
+    "changes": [
+      "Replace the Yandex.Market cover on the homepage and related-case widgets with the approved Figma dashboard. Remove the illustrative-data footer from the artwork; preserve existing case copy and card layout."
+    ]
+  },
+  {
+    "version": "1.5.13",
+    "date": "2026-10-22",
+    "title": "Case research and measurement clarifications",
+    "changes": [
+      "Apply owner-approved clarifications across all six cases in Russian and English: earlier schedule editing in RLO, the research behind AI board creation, Larixon workflow bottlenecks, Yandex filter discoverability, Medesk delivery measurement and Material.pro conversion comparisons and A/B tests.",
+      "Use the approved shorter Leasing, Bank and Medesk passages; preserve all other case text, figures, testimonials and layout."
+    ]
+  },
+  {
+    "version": "1.5.12",
+    "date": "2026-10-22",
+    "title": "Remove duplicate LaaS description",
+    "changes": [
+      "Remove the separate car-leasing Behind the scenes block in both Leasing versions after the owner clarified that it described LaaS. Preserve the LaaS block and all other text."
+    ]
+  },
+  {
+    "version": "1.5.11",
+    "date": "2026-10-22",
+    "title": "Leasing satisfaction-measurement focus",
+    "changes": [
+      "Explain the move from loyalty measurement through NPS to product satisfaction through CSAT in Russian and English. Preserve the historical NPS improvement, separate cohorts and confidential scores."
+    ]
+  },
+  {
+    "version": "1.5.10",
+    "date": "2026-10-22",
+    "title": "Raiffeisen case context and trading workflows",
+    "changes": [
+      "Clarify the bank strategy, portfolio-management constraints and research with around 20 participants alongside the Product Owner.",
+      "Add confirmed trading and rebalancing workflows, clarify the Apple query example and credit portfolio managers for board templates.",
+      "Use present tense for RLO with historical portfolio context and the owner-confirmed CIB name; list lifecycle scenarios including arrears and repossession, keep schedule examples open-ended, and clarify the move from NPS to CSAT with confidential scores. Apply both languages."
+    ]
+  },
+  {
+    "version": "1.5.9",
+    "date": "2026-10-22",
+    "title": "Larixon team practices and bank context",
+    "changes": [
+      "Replace Larixon’s removed review gate with one-on-ones, design reviews and retrospectives, and align the hired researcher’s title to UX Research Lead.",
+      "Clarify the bank terminal’s target audience, update participation to over six months and add legal constraints to its AI requirements in both languages."
+    ]
+  },
+  {
+    "version": "1.5.8",
+    "date": "2026-10-22",
+    "title": "Larixon product and design-function context",
+    "changes": [
+      "Identify the countries of Bazaraki, Unegui and Somon and their local classifieds leadership. Clarify that reactive design describes the previous situation.",
+      "Add shadcn/ui as the foundation that accelerated design-system setup, and introduce the dDOR abbreviation in both language versions. Preserve all other case content."
+    ]
+  },
+  {
+    "version": "1.5.7",
+    "date": "2026-10-22",
+    "title": "Clearer QUIK context in the bank case",
+    "changes": [
+      "Simplify the approved description of the bank’s QUIK setup in Russian and English. Preserve all other case content."
+    ]
+  },
+  {
+    "version": "1.5.6",
+    "date": "2026-10-22",
+    "title": "Case outcome scope and baseline",
+    "changes": [
+      "Clarify Larixon’s three-week design cycle against the previous cases that could stretch over several months.",
+      "Move the Yandex.Market customer’s eightfold revenue-growth example from Outcomes to Behind the scenes, retaining its wording as service-value context. Apply both changes in English and Russian."
+    ]
+  },
+  {
+    "version": "1.5.5",
+    "date": "2026-10-22",
+    "title": "Yandex.Market client and onboarding wording",
+    "changes": [
+      "Describe Microsoft and other vendors/retail chains as clients rather than partners in both language versions.",
+      "Clarify onboarding to the service and remove the repeated analytics wording. Preserve all other case content and the Russian proofreading policy."
+    ]
+  },
+  {
+    "version": "1.5.4",
+    "date": "2026-10-21",
+    "title": "Medesk conference and print materials",
+    "changes": [
+      "Add coordination of freelancers and illustrators for conference materials, print collateral and handouts to Medesk Behind the scenes in English and Russian.",
+      "Retain all approved Medesk research, integration and outcome refinements and Material.pro client PIK from the preceding release."
+    ]
+  },
+  {
+    "version": "1.5.3",
+    "date": "2026-10-21",
+    "title": "Medesk research and outcomes; Material.pro clients",
+    "changes": [
+      "Clarify Medesk’s new-module goals, in-depth interviews, design-system collaboration and appointment rescheduling in English and Russian.",
+      "Add country-specific tax settings, named integration examples, the nearly three-year NPS period and the confirmed 20% reduction in time to market measured in sprints.",
+      "Add PIK as a Material.pro client in both languages. Retain untracked Russian proofreading pages."
+    ]
+  },
+  {
+    "version": "1.5.2",
+    "date": "2026-10-21",
+    "title": "Approved case refinements in English and Russian",
+    "changes": [
+      "Add fast delivery and “and others” to the Russian Material.pro purchase-option examples.",
+      "Apply the approved Russian Leasing refinements to its English case: clarify research, role and outcomes, remove the generic UX-pattern sentence and move car leasing to Behind the scenes.",
+      "Align the English Material.pro purchase-option examples and two-item Outcomes list. Keep Russian proofreading pages available without analytics."
+    ]
+  },
+  {
+    "version": "1.5.1",
+    "date": "2026-10-21",
+    "title": "Russian case editorial refinements",
+    "changes": [
+      "Apply approved Raiffeisen Leasing proofreading edits, remove the UX-pattern sentence and move auto-leasing to Behind the scenes.",
+      "Present the two Material.pro Outcomes as two list items. Preserve English case text, original feedback and the no-analytics proofreading policy."
+    ]
+  },
+  {
+    "version": "1.5.0",
+    "date": "2026-10-21",
+    "title": "Russian case proofreading pages",
+    "changes": [
+      "Add a temporary Russian case index and six translated case pages under /work/ru/.",
+      "Keep proofreading routes untracked and non-indexable, with no analytics or error SDK bootstraps. Preserve all English case content."
+    ]
+  },
+  {
+    "version": "1.4.11",
+    "date": "2026-10-21",
+    "title": "Uniform Outcomes text weight",
+    "changes": [
+      "Remove bold emphasis from eight Outcomes list items across five cases. Preserve all text, list structure, headings, testimonials and other emphasis."
+    ]
+  },
+  {
+    "version": "1.4.10",
+    "date": "2026-10-21",
+    "title": "Clearer case study copy",
+    "changes": [
+      "Apply the nine approved English block revisions to Yandex.Market Analytics, Raiffeisen Bank and Raiffeisen Leasing.",
+      "Preserve every other case section, title, testimonial and link, including the trading terminal development stage and observational outcome."
+    ]
+  },
+  {
+    "version": "1.4.9",
+    "date": "2026-10-21",
+    "title": "GdeMaterial case focused on Material.pro",
+    "changes": [
+      "Publish the approved six-part GdeMaterial case in English, centred on Material.pro estimate-based purchasing, supplier comparison, prototype research and ordering.",
+      "Keep the 0.5% to 1.6% conversion result scoped to Material.pro and Material Chat in Behind the scenes. Preserve historical team feedback; screenshots will follow."
+    ]
+  },
+  {
+    "version": "1.4.8",
+    "date": "2026-10-21",
+    "title": "Medesk case title",
+    "changes": [
+      "Set the Medesk case title to Simplifying everyday work for clinic teams. Preserve the complete approved case body, metadata and historical testimonial."
+    ]
+  },
+  {
+    "version": "1.4.7",
+    "date": "2026-10-21",
+    "title": "Medesk case study from the owner interview",
+    "changes": [
+      "Publish the approved six-part Medesk case covering the design system, clinic workflows, integrations and marketing website.",
+      "Clarify that NPS is the clinic-staff score over years on the team and 10,000 patients is the addressable online-booking audience. Preserve historical team feedback."
+    ]
+  },
+  {
+    "version": "1.4.6",
+    "date": "2026-10-21",
+    "title": "Shorter Yandex.Market case copy",
+    "changes": [
+      "Apply the approved seven copy reductions while preserving the case title, research and solution details, numerical context, outcomes and testimonial."
+    ]
+  },
+  {
+    "version": "1.4.5",
+    "date": "2026-10-21",
+    "title": "Transparent case heading logos",
+    "changes": [
+      "Remove the surface fill behind company logos in all case headings and the shared design-system specimens. Preserve the About avatar background, logo artwork and responsive sizes."
+    ]
+  },
+  {
+    "version": "1.4.4",
+    "date": "2026-10-21",
+    "title": "Restore the Yandex.Market case title",
+    "changes": [
+      "Restore Making marketplace data useful and vendor onboarding faster on the case page and its shared related-case captions. Keep the approved case body and testimonial intact."
+    ]
+  },
+  {
+    "version": "1.4.3",
+    "date": "2026-10-21",
+    "title": "Yandex.Market Analytics case study",
+    "changes": [
+      "Publish the approved six-part case study covering self-service analytics access, configurable dashboards, report exports and a client example.",
+      "Clarify the full onboarding journey, export-file processing times and the separate scope of seller tools and catalogue work."
+    ]
+  },
+  {
+    "version": "1.4.2",
+    "date": "2026-10-20",
+    "title": "Smooth 404 return-button entrance",
+    "changes": [
+      "Include Back to home after the 404 title and copy in the shared reading entrance. Preserve existing timing, reduced-motion and no-JavaScript behavior in the page and design-system specimen."
+    ]
+  },
+  {
+    "version": "1.4.1",
+    "date": "2026-10-20",
+    "title": "Prioritize the initial render before analytics SDKs",
+    "changes": [
+      "Keep Clarity early and defer PostHog, Google Analytics, Yandex Metrika and Sentry SDK requests until after the initial render opportunity, with a bounded fallback.",
+      "Preserve early event queues, error capture and all owner, QA and technical-route exclusions."
+    ]
+  },
+  {
+    "version": "1.4.0",
+    "date": "2026-10-20",
+    "title": "Sentry browser error monitoring",
+    "changes": [
+      "Capture browser errors with release and responsive page context while excluding owner, test, automation and retired routes.",
+      "Keep replay, tracing, logs and automatic personal-data collection disabled."
+    ]
+  },
+  {
+    "version": "1.3.1",
+    "date": "2026-10-20",
+    "title": "Exclude retired route errors from analytics",
+    "changes": [
+      "Exclude retired preview namespaces, including encoded paths and their 404 pages, before every analytics provider starts."
+    ]
+  },
+  {
+    "version": "1.3.0",
+    "date": "2026-10-20",
+    "title": "Portfolio engagement analytics",
+    "changes": [
+      "Measure active case reading, outcomes exposure, multiple cases, qualified contact, recommendation exposure and PDF delivery requests across all three providers.",
+      "Measure completed portrait drags separately from clicks and keyboard, with mouse/touch and responsive layout context. Owner, QA and retired routes remain excluded."
+    ]
+  },
+  {
+    "version": "1.2.0",
+    "date": "2026-10-20",
+    "title": "Yandex Metrika",
+    "changes": [
+      "Connected Yandex Metrika counter 113701996 with Webvisor, click map, link tracking and accurate bounce measurement on all current public pages.",
+      "Owner visits, QA, automation, design system, archive and retired routes retain the shared analytics exclusion."
+    ]
+  },
+  {
+    "version": "1.0.3",
+    "date": "2026-10-20",
+    "title": "Neutral gray button feedback",
+    "changes": [
+      "Changed shared light-surface hover background from #F7F7F6 to neutral #F2F2F2 and pressed background from #EFF0ED to #E8E8E8. Neutralized the three matching control-state borders.",
+      "Brief your AI, Back, View Project, More About and the actual DS specimens share these tokens. Dark-theme overrides retain their current values."
+    ]
+  },
+  {
+    "version": "1.0.2",
+    "date": "2026-10-20",
+    "title": "Work, life & balance",
+    "changes": [
+      "Renamed the homepage About teaser and About page heading to Work, life & balance in their canonical shared sources. The actual design-system specimens and code recipes regenerate from the same copy."
+    ]
+  },
+  {
+    "version": "1.0.1",
+    "date": "2026-10-20",
+    "title": "Remove unused image assets",
+    "changes": [
+      "Removed the obsolete About teaser collage and original portrait-start poster after verifying current initial, reduced-motion and failure posters on desktop, phone and iPad profiles in both themes.",
+      "The initial portrait pose stays identical; the active alpha-cleaned poster, both players, animation ZIPs and the design-system release are unchanged."
+    ]
+  },
+  {
+    "version": "1.0.0",
+    "date": "2026-10-20",
+    "title": "Independent site releases",
+    "changes": [
+      "Introduced semantic site versions with automatic content revisions and the exact design-system release recorded in version.json.",
+      "Update checks continue to compare build revisions, including compatibility with the previous hash-only manifest."
+    ]
+  }
+]

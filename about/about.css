@@ -1,0 +1,190 @@
+/* About-specific composition. Shared typography and controls live in site-ui.css. */
+.about-page{min-width:0}
+.about-page>.header:not(.menu-open){z-index:1}
+.reading-viewport-probe{position:fixed;top:0;left:0;width:0;height:100svh;visibility:hidden;pointer-events:none;contain:strict}
+.reading-footer-ready .about-main{min-height:var(--reading-viewport-height)}
+.reading-footer-overlap .about-main{position:sticky;top:var(--reading-sticky-top);z-index:0;transform-origin:center bottom}
+html[data-reading-footer-covered="true"]{background:var(--color-inverse);overscroll-behavior-y:none}
+.about-main{width:var(--width-page);margin:0 auto;padding-top:107px;padding-bottom:86px}
+.about-title-row{display:grid;grid-template-columns:120px minmax(0,var(--width-prose)) 120px;gap:var(--space-10);align-items:center;margin-bottom:35px}
+.about-title{display:flex;align-items:center;gap:var(--space-4);min-height:64px}
+.about-title h1{margin:0;text-wrap:pretty}
+.about-avatar{position:relative;flex:none;width:var(--size-avatar);height:var(--size-avatar);overflow:hidden;border-radius:var(--radius-pill);background:var(--color-surface)}
+.about-avatar img{display:block;width:100%;height:100%;object-fit:cover}
+.company-logo{background:transparent}
+.company-logo img{object-fit:contain}
+.header .about-mobile-back{display:none}
+.about-prose{width:var(--width-prose);margin-inline:auto;text-wrap:pretty;overflow-wrap:break-word}
+.about-prose p{margin:0}
+.about-intro{display:flex;flex-direction:column;gap:var(--space-4);margin-bottom:var(--space-6)}
+.about-main>.recommendations{width:100%;}
+.about-gallery-main>.recommendations{--reading-reveal-order:3}
+.about-gallery-main>.photo-gallery-footer{--reading-reveal-order:11}
+.about-photo-placeholder{width:100%;height:290px;margin-bottom:var(--space-6);border-radius:var(--radius-placeholder);background:var(--color-surface)}
+.about-sections{display:flex;flex-direction:column;gap:var(--space-4)}
+.about-sections>section{display:flex;flex-direction:column;gap:var(--space-4)}
+/* Employment metadata sits directly below its role; other prose gaps stay unchanged. */
+.about-sections>section>.prose-subheading+.prose-employment{margin-block-start:calc(-1 * var(--space-4))}
+.about-sections>section>h2{display:flex;align-items:center;min-height:60px;margin:0}
+/* Supplied case artwork keeps its complete composition. Screens can extend to
+   the page width; illustrations stay with the prose. Both retain page gutters. */
+.article-figure{flex:none;align-self:center;margin:var(--space-6) 0 var(--space-8);min-width:0}
+.article-figure-wide{width:min(var(--width-page),calc(100vw - var(--gutter-page) * 2))}
+.article-figure-prose{width:100%}
+.article-figure img{display:block;width:100%;height:auto;object-fit:contain}
+/* First-paint entrance works without JavaScript. The reading runtime only
+   postpones blocks that have not yet reached the viewport. Layout stays fixed. */
+/* Individual translate preserves the gallery's independent horizontal centering. */
+@keyframes reading-content-enter{from{opacity:0;translate:0 var(--offset-reading-reveal)}to{opacity:1;translate:none}}
+@media(prefers-reduced-motion:no-preference){
+  .about-main :where(.about-title-row,.resume-formats,.resume-back-to-top,.reading-about-teaser,.case-study-title,.related-cases,.not-found-actions,.about-intro > p,.about-photo-placeholder,.article-work,.about-sections > section > :not(.resume-section-content),.resume-section-content > *,.about-main > .recommendations,.about-gallery-main > .photo-gallery-footer){animation:reading-content-enter var(--duration-reading-reveal) var(--ease-reading-reveal) var(--reading-reveal-delay,calc(var(--delay-reading-step) * var(--reading-reveal-order,0))) backwards}
+  .about-main [data-reading-reveal="pending"]{animation:none;opacity:0;translate:0 var(--offset-reading-reveal)}
+  .about-main [data-reading-reveal="shown"]{animation:none}
+}
+.ds-preview[data-state="reduced-motion"] .about-main :is(.about-title-row,.resume-formats,.resume-back-to-top,.reading-about-teaser,.case-study-title,.related-cases,.not-found-actions,.about-intro > p,.about-photo-placeholder,.article-work,.about-sections > section > :not(.resume-section-content),.resume-section-content > *,.about-main > .recommendations,.about-gallery-main > .photo-gallery-footer){animation:none;opacity:1;translate:none}
+@media(max-width:983px) and (min-width:768px) and (pointer:fine){
+  .about-main{width:calc(100% - var(--gutter-page) * 2)}
+  .about-title-row{grid-template-columns:120px minmax(0,1fr);gap:var(--space-10)}
+  .about-prose{width:min(100%,var(--width-prose))}
+  .about-page .header{width:calc(100% - var(--gutter-page) * 2)}
+}
+@media(max-width:767px), (max-width:1023px) and (pointer:coarse){
+  .about-page .header{top:calc(17px + env(safe-area-inset-top));min-height:var(--height-control)}
+  .about-page .header .about-identity{display:flex;align-items:center;gap:var(--space-5)}
+  .header .about-mobile-back{display:inline-flex;width:var(--width-back-mobile);padding:var(--space-2) var(--space-6)}
+  .about-desktop-back{display:none}
+  .about-page .header .name{white-space:nowrap}
+  .about-main{width:calc(100% - var(--gutter-page) * 2);max-width:var(--width-mobile);padding-top:calc(104px + env(safe-area-inset-top));padding-bottom:112px}
+  .about-avatar{width:var(--size-avatar-mobile);height:var(--size-avatar-mobile)}
+  .about-title-row{display:block;margin-bottom:42px}
+  .about-title{width:100%}
+  .about-prose{width:100%}
+  .about-intro{gap:var(--space-5);margin-bottom:var(--space-7)}
+  .about-gallery-main>.recommendations{margin-block:calc(var(--space-7) * 1.5)}
+  .about-main>.recommendations,.about-main>.case-study-title{width:100vw;margin-inline:calc((100% - 100vw) / 2)}
+  .about-photo-placeholder{height:222px;margin-bottom:var(--space-7)}
+  .about-sections,.about-sections>section{gap:var(--space-5)}
+  .article-figure-wide{width:100%}
+  .about-sections>section>h2{min-height:0}
+  html:is(:not(.navigation-js),.mobile-navigation-fallback) .about-main{padding-top:200px}
+}
+@media(max-width:359px){
+  .about-page .header:not(.menu-open) .about-identity{gap:var(--space-3)}
+  .about-title{gap:var(--space-3)}
+  .about-title h1{font-size:var(--type-heading-compact)}
+}
+@media(prefers-reduced-motion:reduce){.ui-back{transition:none}}
+
+/* Page gutters belong to the reading shell; an embedded card fills it. */
+.article-work>.work-card{width:100%;max-width:100%}
+@media(min-width:768px) and (max-width:983px) and (pointer:fine){
+.article-work>.work-card{flex-direction:column;align-items:stretch}
+.article-work .work-copy,.article-work .work-artwork{width:100%}
+.article-work .work-artwork{height:auto;aspect-ratio:544 / 294}
+}
+
+/* Case title and testimonial panels share the desktop text inset. */
+.case-study-page .about-title-row{margin-bottom:57px}
+.case-study-title{box-sizing:border-box;width:100%;min-height:230px;margin:0 0 36px;padding:36px calc(var(--space-8) * 2) 52px;border-radius:var(--radius-placeholder);background:var(--color-case-surface)}
+.case-study-title .about-prose{width:100%;display:flex;flex-direction:column;gap:14px}
+.case-study-label{margin:0;font-size:var(--type-body);font-weight:var(--weight-body);line-height:var(--line-copy);letter-spacing:var(--tracking-body);color:var(--color-muted)}
+.case-study-title h2{margin:0;font-size:var(--type-case-title);font-weight:var(--weight-semibold);line-height:var(--line-compact);letter-spacing:normal;overflow-wrap:break-word}
+@media(max-width:767px), (max-width:1023px) and (pointer:coarse){
+ .case-study-page .about-title-row{margin-bottom:42px}
+ .case-study-title{min-height:0;border-radius:0;padding:var(--space-7) var(--space-5) var(--space-10);margin-bottom:var(--space-7)}
+ .case-study-title .about-prose{width:100%;gap:var(--space-3)}
+ .case-study-title h2{font-size:var(--type-case-title-mobile)}
+}
+
+/* Related case links stay in the reading surface and share its footer overlap. */
+.about-main.has-related-cases{padding-bottom:0}
+.has-related-cases>.related-cases{margin-top:86px}
+.related-cases{position:relative;background:var(--color-case-surface);box-shadow:0 0 0 100vmax var(--color-case-surface);clip-path:inset(0 -100vmax);padding-bottom:96px}
+.related-cases>h2{display:flex;align-items:center;justify-content:center;min-height:140px;margin:0;font-size:var(--type-heading);font-weight:var(--weight-semibold);line-height:var(--line-prose);letter-spacing:var(--tracking-heading);text-align:center}
+.related-cases-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:46px var(--space-4);align-items:start}
+.related-case-card{display:flex;flex-direction:column;gap:var(--space-4);min-width:0;color:var(--color-ink);text-decoration:none;font-size:var(--type-body);font-weight:var(--weight-body);line-height:var(--line-copy);letter-spacing:var(--tracking-body);word-spacing:normal;text-wrap:pretty;overflow-wrap:break-word;--ui-focus-radius:var(--radius-artwork)}
+.related-case-image{display:block;width:100%;height:auto;aspect-ratio:544 / 294;object-fit:contain;border-radius:var(--radius-artwork);background:var(--color-canvas)}
+.related-case-copy{margin:0;font:inherit}
+@media(max-width:767px), (max-width:1023px) and (pointer:coarse){
+ .has-related-cases>.related-cases{margin-top:112px}
+ .related-cases-grid{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--space-2)}
+ .related-case-card{font-size:var(--type-small)}
+ .related-case-copy{line-height:var(--line-contact)}
+}
+
+/* Resume composition: existing title, panel, button and reading tokens. */
+.resume-page{position:relative;padding-bottom:60px}
+.resume-page>.about-prose{width:100%}
+.resume-page>.article-sections{gap:0}
+.resume-page .article-sections>section{display:grid;grid-template-columns:minmax(0,304fr) minmax(0,624fr);column-gap:var(--space-4);row-gap:var(--space-4);min-width:0}
+.resume-page .article-sections>section+section{margin-top:var(--space-8);padding-top:var(--space-8);border-top:1px solid var(--border-subtle)}
+.resume-page .article-sections>section>h2{grid-column:1;grid-row:1;position:sticky;top:var(--space-6);align-self:start;display:block;min-height:0;font-weight:var(--weight-bold);line-height:var(--line-contact);overflow-wrap:normal}
+.resume-page .article-sections>section>:not(h2){grid-column:2;min-width:0}
+.resume-page .article-sections>section>:nth-child(2){grid-row:1}
+.resume-section-content{display:flex;flex-direction:column;gap:var(--space-4);min-width:0}
+.resume-section-content>.prose-subheading+.prose-employment{margin-block-start:calc(-1 * var(--space-4))}
+.resume-employment-heading{display:flex;align-items:center;gap:var(--space-4);min-width:0}
+.resume-employment-heading>div{min-width:0}
+.resume-employment-heading>div:not(.company-logo){flex:1}
+.resume-employment-heading>.company-logo{order:1;margin-inline-start:auto}
+.resume-employment-heading .prose-subheading,.resume-employment-heading .prose-employment{margin:0}
+.resume-employment-heading~.resume-employment-heading,.resume-section-content>.prose-subheading:not(:first-child){padding-top:var(--space-4);border-top:1px solid var(--border-subtle)}
+.resume-achievements{display:flex;flex-direction:column;gap:var(--space-6);min-width:0;padding-bottom:var(--space-2)}
+.resume-case-link{width:fit-content;margin-top:0}
+.resume-page :is(.article-sections>section,.article-sections>section>h2){scroll-margin-top:var(--space-6)}
+.resume-back-to-top{display:flex;width:fit-content;margin:60px auto 0;letter-spacing:normal;word-spacing:normal}
+.resume-back-to-top img{transform:rotate(90deg)}
+.resume-page section:is([aria-labelledby="experience"],[aria-labelledby="education"]) .prose-list,.resume-page .prose-company-description,.resume-page section[aria-labelledby="experience"] .resume-section-content>p:not(.prose-employment){font-size:var(--type-body);line-height:var(--line-resume-list)}
+.resume-page section[aria-labelledby="experience"] .prose-list li+li{margin-block-start:var(--space-2)}
+.resume-page>.reading-about-teaser{display:grid;grid-template-columns:minmax(0,1fr);align-items:center;min-height:100svh}
+.resume-page.resume-works-overlap>.reading-about-teaser{position:sticky;top:var(--resume-teaser-sticky-top);z-index:0;transform-origin:center bottom}
+.resume-page>.reading-about-teaser[data-resume-covered="true"] .home-about-track{animation-play-state:paused}
+.resume-page>.related-cases{z-index:1;background:var(--color-canvas);box-shadow:0 0 0 100vmax var(--color-canvas)}
+.resume-page .about-title-row{margin-bottom:var(--height-control-spacious)}
+.resume-formats{display:grid;grid-template-columns:minmax(0,513fr) minmax(0,431fr);margin:0 0 calc(var(--space-5) + var(--space-6));border-radius:var(--radius-placeholder);background:var(--color-case-surface)}
+.resume-format-column{display:flex;flex-direction:column;align-items:flex-start;min-width:0;min-height:275px;gap:var(--space-4);padding-block:calc(var(--space-5) + var(--space-6)) calc(var(--space-10) - var(--space-2) / 2)}
+.resume-format-files{padding-inline:calc(var(--space-10) + var(--space-6)) var(--space-8)}
+.resume-format-ai{padding-inline:calc(var(--space-10) + var(--space-2));border-inline-start:1px solid var(--border-subtle)}
+.resume-formats h2{margin:0;font-size:var(--type-case-title);font-weight:var(--weight-semibold);line-height:var(--line-compact);letter-spacing:normal;text-wrap:pretty}
+.resume-format-description{margin:0;font-size:var(--type-body);font-weight:var(--weight-body);line-height:var(--line-copy);letter-spacing:normal}
+.resume-format-actions{display:flex;flex-wrap:wrap;align-items:flex-start;gap:var(--space-3);margin-top:auto}
+.resume-formats :is(.ui-download,.agent-button){letter-spacing:normal;word-spacing:normal}
+.resume-format-ai>.agent-control{margin-top:auto}
+.resume-format-ai .agent-button{margin-top:0;gap:var(--space-4)}
+.resume-format-ai .agent-button-label{width:max-content;min-width:105px}
+/* The Figma panel places Copilot before Cursor; keep the original logo nodes. */
+.resume-format-ai .agent-button-logos>img:nth-child(4){order:1}
+.resume-format-ai .agent-button:lang(ru) .agent-button-label{width:var(--width-brief-label-ru)}
+@media(max-width:1023px){
+ .resume-formats{grid-template-columns:minmax(0,1fr)}
+ .resume-format-column{min-height:0;padding:var(--space-8);gap:var(--space-4)}
+ .resume-format-ai{border-inline-start:0;border-block-start:1px solid var(--border-subtle)}
+ .resume-format-actions,.resume-format-ai>.agent-control{margin-top:var(--space-2)}
+}
+.resume-page .article-sections>section>h2{font-size:var(--type-heading)}
+.reading-about-teaser{display:block;min-height:0;margin-top:86px;padding:calc(var(--space-10) * 2) 0;background:var(--color-case-surface);box-shadow:0 0 0 100vmax var(--color-case-surface);clip-path:inset(0 -100vmax)}
+.reading-about-teaser .works-body{display:block;width:100%;padding:0}
+.reading-about-teaser .home-about-card{max-width:100%}
+.reading-about-teaser+.related-cases{margin-top:0}
+@media(max-width:767px), (max-width:1023px) and (pointer:coarse){
+ .resume-page .about-title-row{margin-bottom:var(--space-10)}
+ .resume-page .article-sections>section{display:flex;gap:var(--space-4)}
+ .resume-page .article-sections>section>h2{position:static;margin-bottom:var(--space-2)}
+ .resume-formats{margin-bottom:var(--space-10);width:100vw;margin-inline:calc((100% - 100vw) / 2);border-radius:0}
+ .resume-format-column{padding:var(--space-7) var(--space-5) var(--space-8)}
+ .resume-formats h2{font-size:var(--type-case-title-mobile)}
+ .resume-format-actions{flex-direction:row;align-items:flex-start;gap:var(--space-4) var(--space-2)}
+ .resume-format-actions>.ui-download{flex:none;padding-inline:var(--space-4);gap:var(--space-2);font-size:var(--type-small)}
+ .reading-about-teaser{margin-top:112px;padding:calc(var(--space-10) * 2) 0}
+ .reading-about-teaser+.related-cases{margin-top:0}
+}
+@media(max-width:389px){
+ .resume-formats .ui-download{padding-inline:var(--space-3)}
+}
+@media(max-width:359px){
+ .resume-formats .agent-button{gap:var(--space-2);padding-inline:var(--space-2)}
+ .resume-format-ai .agent-button:lang(ru){gap:var(--space-2)}
+ .resume-format-ai .agent-button:lang(ru) .agent-button-label{width:calc(var(--size-icon) * 5.5)}
+ .resume-format-ai .agent-button:lang(ru) .agent-button-logos{gap:0}
+ .resume-format-ai .agent-button:lang(ru) .agent-button-copied>span{font-size:var(--type-small)}
+}

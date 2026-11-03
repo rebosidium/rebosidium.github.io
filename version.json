@@ -1,0 +1,11 @@
+{
+  "version": "1.14.1",
+  "revision": "e5e646df6269",
+  "release": "1.14.1+e5e646df6269",
+  "updatedAt": "2026-10-29T17:45:09.000Z",
+  "designSystem": {
+    "version": "1.68.4",
+    "revision": "88bb34c32295",
+    "release": "1.68.4+88bb34c32295"
+  }
+}
